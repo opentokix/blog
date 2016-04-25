@@ -1,0 +1,14 @@
+# Site settings
+title: Server, Linux, Software, Hardware
+email: do-not-use@email.tld
+description: "Monitoring and metrics"  
+baseurl: "/blog"
+url: "https://random.0x7b8.net"
+twitter_username: opentokix
+github_username:  opentokix
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+source: /home/peter/src/local_blog
+destination: /srv/services/web/random.0x7b8.net/pub/blog
