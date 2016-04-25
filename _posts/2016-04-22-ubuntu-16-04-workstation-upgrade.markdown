@@ -51,7 +51,7 @@ This took a long long time, and lots of googling and to end up in the wrong solu
 
 What I aneded up doing was. 
 
-### Disable graphite console for grub and boot, so it never leave textmode. 
+### Disable high res console for grub and boot, so it never leave textmode. 
 
 This is somethign I personally perfer since those consoles tend to be much faster, and monitors find the correct mode quicker and such. 
 
