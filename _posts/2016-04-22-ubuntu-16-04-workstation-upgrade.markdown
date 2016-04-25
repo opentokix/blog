@@ -4,7 +4,7 @@ title: Ubuntu 16.04 LTS Workstation upgrade
 tags: sysadmin, ubuntu, 16.04, lts, upgrade, radeon, video, driver, xorg
 ---
 
-Usually I dont jump on the bandwagon, but I can change my mind and today I wanted to be on the bleeding edge of the ubuntu wagon. Went on and upgraded my ubuntu 14.04 LTS to 16.04 LTS and the upgrade was not flawless like I have come to expect from debian. 
+Usually I don't jump on the bandwagon, but I can change my mind and today I wanted to be on the bleeding edge of the ubuntu wagon. Went on and upgraded my ubuntu 14.04 LTS to 16.04 LTS and the upgrade was not flawless like I have come to expect from debian. 
 
 For some reason the normal do-release-upgrade did not pick up a new release, so I hade to use the command `do-release-upgrade -d` to get the beta. 
 
@@ -41,7 +41,7 @@ mount /dev/mapper/vg0-sysusr /root/usr
 /root/usr/bin/vim.tiny /root/fstab 
 {% endhighlight %}
 
-Then replaced the UUID=... entry with /dev/mapper/vg0-sysusr 
+Then I replaced the UUID=... entry with /dev/mapper/vg0-sysusr 
 
 # Video driver in Xorg
 
@@ -49,11 +49,11 @@ My next hurdle that was a big one, was to transition from fglrx to amdgpu that i
 
 This took a long long time, and lots of googling and to end up in the wrong solution path. 
 
-What I aneded up doing was. 
+What I ended up doing was. 
 
-### Disable high res console for grub and boot, so it never leave textmode. 
+### Disable hi res console for grub and boot, so it never leaves textmode. 
 
-This is somethign I personally perfer since those consoles tend to be much faster, and monitors find the correct mode quicker and such. 
+This is something I personally prefer since those consoles tend to be much faster, and monitors find the correct mode quicker and such. 
 
 This is done by adding this to your /etc/default/grub and issuing update-grub2 
 This is added with the other options on `GRUB_CMDLINE_LINUX_DEFAULT`
@@ -68,14 +68,14 @@ For a long time nomodeset has been default on the grub cmdline, I am not sure wh
 
 `*ERROR* vgacon disables radeon kernel modesetting`
 
-This will show up in your dmest/kernel log
+This will show up in your dmesg/kernel log
 
 So my entire grub cmd line ended up like this: 
 `GRUB_CMDLINE_LINUX_DEFAULT="quiet splash nofb vga=normal video=vesafb:off"`
 
 # Screen configuration in X  
 
-My workstation have three screens, two is in portarait mode and one in landscape mode. 
+My workstation has three screens, two are in portrait mode and one in landscape mode. 
 
 Quick and dirty solution is making a xrandr script that will rotate my screens, and position them correctly for me. 
 
@@ -98,7 +98,7 @@ xrandr --output DVI-1 --pos +2160x770
 
 ### Conclusion 
 
-It was not super easy to figure out the nomodeset. But I am super happy with my upgrade. And my desktop feels very very fast now. Scrolling massive webpages is fluent, opening new tabs. Using libreoffice feelt very responsive and fast. I am actually suprised by this desktop experience. 
+It was not super easy to figure out the nomodeset. But I am super happy with my upgrade. And my desktop feels very very fast now. Scrolling massive webpages is fluent, opening new tabs. Using libreoffice felt very responsive and fast. I am actually suprised by this desktop experience. 
 
-My windows manager of choice is i3 wm, when I found it I will never go to anything else I think. It is wonderful. 
+My window manager of choice is i3 wm, when I found it I will never go to anything else I think. It is wonderful. 
 
