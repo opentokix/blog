@@ -2,8 +2,8 @@
 title: Server, Linux, Software, Hardware
 email: do-not-use@email.tld
 description: "Monitoring and metrics"  
-baseurl: "/blog"
-url: "https://random.0x7b8.net"
+baseurl: "/"
+url: "https://opentokix.github.io"
 twitter_username: opentokix
 github_username:  opentokix
 
@@ -11,4 +11,4 @@ github_username:  opentokix
 markdown: kramdown
 permalink: pretty
 source: /home/peter/src/blog
-destination: /srv/services/web/random.0x7b8.net/pub/blog
+destination: /home/peter/src/opentokix.github.io
